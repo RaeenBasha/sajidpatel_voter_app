@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "150025815077",
+    "firebase_url": "https://my-voter-app-data-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "my-voter-app-data",
+    "storage_bucket": "my-voter-app-data.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150025815077:android:3dfa126c7ce9cd83beabcc",
+        "android_client_info": {
+          "package_name": "com.sajidpatel.sajidpatel_voter_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT-PdH1_fabjM1Estc3L8yomc4OttZS7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
