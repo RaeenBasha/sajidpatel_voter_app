@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
-// firebase_ui_auth provides SignInScreen, PhoneAuthProvider, etc.
+// firebase_auth is still needed for User, but hide PhoneAuthProvider
+import 'package:firebase_auth/firebase_auth.dart' hide PhoneAuthProvider;
+
+// use PhoneAuthProvider from firebase_ui_auth
 import 'package:firebase_ui_auth/firebase_ui_auth.dart'
     show SignInScreen, PhoneAuthProvider, AuthStateChangeAction, SignedIn;
 
-// localization support
+// localization delegate
 import 'package:firebase_ui_localizations/firebase_ui_localizations.dart';
 
 import 'src/ui/home_screen.dart';
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
       title: 'Voter List Dashboard',
       debugShowCheckedModeBanner: false,
       localizationsDelegates: [
-        FirebaseUILocalizations.delegate, // ✅ fixed
+        FirebaseUILocalizations.delegate,
       ],
       theme: ThemeData(useMaterial3: true),
       home: const AuthGate(),
