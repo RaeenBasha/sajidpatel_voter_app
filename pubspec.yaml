@@ -55,6 +55,7 @@ dependencies:
   excel: ^4.0.6
   firebase_ui_auth: ^2.0.0
   firebase_ui_localizations: ^1.14.1
+  font_awesome_flutter: ^10.7.0
 
 dev_dependencies:
   flutter_test:

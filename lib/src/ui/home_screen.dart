@@ -11,7 +11,7 @@ import '../services/voter_service.dart';
 import '../models/voter.dart';
 import '../utils/pdf_slips.dart';
 
-// ✅ added WhatsApp icon
+// WhatsApp icon
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -136,8 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(v.phone),
                               IconButton(
                                 tooltip: 'Send WhatsApp',
-                                icon: const Icon(
-                                    FontAwesomeIcons.whatsapp), // ✅ fixed
+                                icon: Icon(FontAwesomeIcons.whatsapp), // ✅ no const
                                 onPressed: () => _sendWhatsApp(v),
                               ),
                             ],
@@ -229,12 +228,12 @@ class _HomeScreenState extends State<HomeScreen> {
     final excel = xls.Excel.createExcel();
     final sheet = excel['Voters'];
     sheet.appendRow([
-      const xls.TextCellValue('Sector'),
-      const xls.TextCellValue('Building'),
-      const xls.TextCellValue('Flat'),
-      const xls.TextCellValue('Voter Name'),
-      const xls.TextCellValue('RSC No'),
-      const xls.TextCellValue('Mobile'),
+      xls.TextCellValue('Sector'),
+      xls.TextCellValue('Building'),
+      xls.TextCellValue('Flat'),
+      xls.TextCellValue('Voter Name'),
+      xls.TextCellValue('RSC No'),
+      xls.TextCellValue('Mobile'),
     ]);
 
     for (final v in rows) {
